@@ -1,0 +1,257 @@
+.experience-section {
+    padding: 80px 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .experience-content {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 50px;
+  }
+  
+  .experience-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .laptop-container {
+    position: relative;
+    transform: perspective(1000px) rotateY(15deg) rotateX(10deg);
+    transform-style: preserve-3d;
+    animation: laptopTilt 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes laptopTilt {
+    0% {
+      transform: perspective(1000px) rotateY(15deg) rotateX(10deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(-15deg) rotateX(10deg);
+    }
+  }
+
+  .laptop {
+    width: 350px;
+    height: 230px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: laptopBounce 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes laptopBounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .laptop-screen {
+    width: 350px;
+    height: 220px;
+    background: #1a1d2e;
+    border-radius: 10px;
+    position: relative;
+    transform-origin: bottom;
+    transform: rotateX(80deg);
+    padding: 15px;
+    border: 2px solid #33e8ff;
+    box-shadow: 0 0 15px rgba(51, 232, 255, 0.5);
+    overflow: hidden;
+    animation: screenGlow 4s ease-in-out infinite alternate;
+  }
+  .laptop-screen {
+    transform: rotateX(0deg) rotateY(0deg);
+    height: 150px;
+    width: 120px;
+    animation: typingEffect 4s steps(40, end) infinite;
+  }
+
+  @keyframes typingEffect {
+    0% {
+      content: "";
+    }
+    100% {
+      content: "Experience: Building interactive and responsive web designs.";
+    }
+  }
+  
+  @keyframes screenGlow {
+    0% {
+      box-shadow: 0 0 15px rgba(51, 232, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 25px rgba(51, 232, 255, 0.8);
+    }
+  }
+  
+  .code-lines {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .code-lines::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(90deg, transparent 0%, transparent 5%, rgba(255,255,255,0.1) 5%, rgba(255,255,255,0.1) 95%, transparent 95%),
+      linear-gradient(transparent 0, transparent 50%, rgba(255,138,76,0.3) 50%, rgba(255,138,76,0.3) 51%, transparent 51%);
+    background-size: 100% 30px, 100% 6px;
+    animation: scrollCode 10s linear infinite;
+  }
+  
+  @keyframes scrollCode {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 300px;
+    }
+  }
+  
+  .laptop-keyboard {
+    width: 380px;
+    height: 15px;
+    background: #111;
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    border-radius: 0 0 6px 6px;
+    transform: translateZ(-2px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  .coffee-cup {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background: #33e8ff;
+    border-radius: 5px 5px 25px 25px;
+    left: -80px;
+    bottom: 20px;
+    transform: rotate(-10deg);
+    box-shadow: 0 0 15px rgba(51, 232, 255, 0.7);
+  }
+  
+  .cup-glow {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+  }
+  
+  .experience-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .experience-card {
+    background: rgba(13, 25, 36, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(51, 232, 255, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(51, 232, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .experience-period {
+    color: #33e8ff;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+  
+  .experience-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .experience-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(13, 25, 36, 0.8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(51, 232, 255, 0.3);
+  }
+  
+  .user-icon {
+    width: 30px;
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2333e8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>');
+    background-size: contain;
+  }
+  
+  .experience-info {
+    flex: 1;
+  }
+  
+  .experience-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .experience-organization {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 992px) {
+    .experience-content {
+      flex-direction: column;
+    }
+    
+    .experience-illustration {
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 60px 20px;
+    }
+    
+    .laptop {
+      width: 280px;
+      height: 180px;
+    }
+    
+    .laptop-screen {
+      width: 280px;
+      height: 180px;
+    }
+    
+    .laptop-keyboard {
+      width: 310px;
+    }
+  }
