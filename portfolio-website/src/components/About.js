@@ -37,7 +37,7 @@ const AboutSection = () => {
           <div className="resume-section">
             <p className="resume-title">Download My Resume:</p>
             <a 
-          href="https://drive.google.com/file/d/1haWZfSv5ftxGqJ1su9Uh7XMXoVUSpOfn/view?usp=sharing" 
+          href="https://drive.google.com/file/d/15ckcliV_L7IO5LhtcDAAgs9miynMHDWk/view?usp=sharing" 
           className="resume-download-link" 
           target="_blank" 
           rel="noopener noreferrer"
