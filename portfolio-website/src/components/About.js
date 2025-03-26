@@ -12,7 +12,11 @@ const AboutSection = () => {
           <p className="about-text">
             My name is <span className="name-highlight">Bhanu Pratap Singh</span>. I am a passionate AI Engineer and Data Scientist with expertise in machine learning, deep learning, and Generative AI. My work focuses on developing cutting-edge AI applications, LLM-powered automation systems, and intelligent data-driven solutions that enhance efficiency and decision-making.
 
+<<<<<<< HEAD
 I have built and deployed AI-powered chatbots, resume analyzers, fake news detection models, and automated code review tools, leveraging advanced NLP and deep learning techniques. My technical proficiency includes Node.js, React, Docker, and full-stack AI deployment, allowing me to create scalable and production-ready AI systems.
+=======
+I have built and deployed AI-powered chatbots, resume analyzers, and automated code review tools, leveraging advanced NLP and deep learning techniques. My technical proficiency includes Node.js, React, Docker, and full-stack AI deployment, allowing me to create scalable and production-ready AI systems.
+>>>>>>> fb94119e91a0483cb61322ff374c5f605e69c6d6
 
 Driven by curiosity and innovation, I am committed to pushing the boundaries of AI and transforming complex challenges into impactful solutions.
           </p>

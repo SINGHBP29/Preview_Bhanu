@@ -67,4 +67,8 @@
 //     );
 // }
 
+<<<<<<< HEAD
 // export default Chatbot;
+=======
+// export default Chatbot;
+>>>>>>> fb94119e91a0483cb61322ff374c5f605e69c6d6
