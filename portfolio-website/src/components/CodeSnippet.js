@@ -78,18 +78,56 @@ function CodeSnippet() {
   const codeLines = [
     { text: "// Skills & Technologies", type: "comment" },
     { text: "const skills = {", type: "function" },
-    { text: "    programmingLanguages: [\"Python\", \"JavaScript\", \"C++\", \"SQL\"],", type: "statement" },
-    { text: "    webDevelopment: [\"React.js\", \"HTML\", \"CSS\"],", type: "statement" },
-    { text: "    backendTechnologies: [\"Django\", \"Node.js\"],", type: "statement" },
-    { text: "    database: [\"PostgreSQL\", \"MySQL\"],", type: "statement" },
-    { text: "    AI_ML: [\"OpenAI API\", \"LangChain\", \"NLP\", \"Scikit-learn\", \"TensorFlow\",\"Machine Learning\",\"GenAI\",\"HuggingFace\"],", type: "statement" },
-    { text: "    cloudPlatforms: [\"Docker\"],", type: "statement" },
-    { text: "    devOpsTools: [\"Docker\", \"Git\"],", type: "statement" },
-    // { text: "    dataVisualization: [\"Tableau\", \"Seaborn\", \"Matplotlib\"],", type: "statement" },
+    { text: "    programmingLanguages: [", type: "statement" },
+    { text: "        \"Python\", \"JavaScript\", \"C++\", \"SQL\"", type: "statement" },
+    { text: "    ],", type: "statement" },
+    { text: "    webDevelopment: [", type: "statement" },
+    { text: "        \"React.js\", \"HTML\", \"CSS\"", type: "statement" },
+    { text: "    ],", type: "statement" },
+    { text: "    backendTechnologies: [", type: "statement" },
+    { text: "        \"Django\", \"Node.js\"", type: "statement" },
+    { text: "    ],", type: "statement" },
+    { text: "    database: [", type: "statement" },
+    { text: "        \"PostgreSQL\", \"MySQL\"", type: "statement" },
+    { text: "    ],", type: "statement" },
+    { text: "    AI_ML: [", type: "statement" },
+    { text: "        \"OpenAI API\", \"LangChain\", \"NLP\", \"Scikit-learn\",", type: "statement" },
+    { text: "        \"TensorFlow\", \"Machine Learning\", \"GenAI\", \"HuggingFace\"", type: "statement" },
+    { text: "    ],", type: "statement" },
+    { text: "    cloudPlatforms: [", type: "statement" },
+    { text: "        \"Docker\"", type: "statement" },
+    { text: "    ],", type: "statement" },
+    { text: "    devOpsTools: [", type: "statement" },
+    { text: "        \"Git\"", type: "statement" },
+    { text: "    ]", type: "statement" },
     { text: "};", type: "function" }
-];
+  ];
 
+  const styles = {
+    codeContainer: {
+      fontFamily: "'Fira Code', monospace",
+      fontSize: "14px",
+      backgroundColor: "#1e1e1e",
+      color: "#ffffff",
+      padding: "15px",
+      borderRadius: "5px",
+      whiteSpace: "pre-wrap",
+      overflowX: "auto",
+      lineHeight: "1.5",
+      letterSpacing: "normal",
+      wordSpacing: "normal",
+    },
+    comment: { color: "#6a9955" },
+    function: { color: "#dcdcaa" },
+    statement: { color: "#9cdcfe" },
+  };
 
+  useEffect(() => {
+    if (terminalRef.current) {
+      const terminal = terminalRef.current;
+      Object.assign(terminal.style, styles.codeContainer);
+    }
+  }, []);
   return (
     <section id="code-snippet" className="code-snippet-section" style={{ maxWidth: '600px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div className="terminal-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '5px 10px', backgroundColor: '#2d2d2d', color: '#fff', borderRadius: '5px 5px 0 0', width: '100%' }}>
@@ -98,7 +136,7 @@ function CodeSnippet() {
           <span className="yellow" style={{ width: '12px', height: '12px', backgroundColor: '#ffbd2e', borderRadius: '50%' }}></span>
           <span className="green" style={{ width: '12px', height: '12px', backgroundColor: '#27c93f', borderRadius: '50%' }}></span>
         </div>
-        <span className="terminal-title" style={{ fontSize: '14px', fontWeight: 'bold' }}>CodeSnippet.c</span>
+        <span className="terminal-title" style={{ fontSize: '14px', fontWeight: 'bold' }}>Skills.c</span>
       </div>
       <div className="code-terminal" ref={terminalRef} style={{ fontSize: '14px', padding: '10px', width: '100%' }}></div>
     </section>
@@ -106,3 +144,4 @@ function CodeSnippet() {
 }
 
 export default CodeSnippet;
+
