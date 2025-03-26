@@ -10,14 +10,11 @@ const AboutSection = () => {
         <h2 className="about-title">WHO I AM?</h2>
         <p className="about-text"></p>
           <p className="about-text">
-            My name is <span className="name-highlight">Bhanu Pratap Singh</span>. I am a professional and
-            enthusiastic programmer in my daily life. I am a quick learner
-            with a self-learning attitude. I love to learn and explore new
-            technologies and am passionate about problem-solving. I love
-            almost all the stacks of web application development and love
-            to make the web more open to the world. My core skills are
-            based on Python, C++, SQL, and JavaScript. I am available for any kind of job opportunity that
-            suits my skills and interests.
+            My name is <span className="name-highlight">Bhanu Pratap Singh</span>. I am a passionate AI Engineer and Data Scientist with expertise in machine learning, deep learning, and Generative AI. My work focuses on developing cutting-edge AI applications, LLM-powered automation systems, and intelligent data-driven solutions that enhance efficiency and decision-making.
+
+I have built and deployed AI-powered chatbots, resume analyzers, and automated code review tools, leveraging advanced NLP and deep learning techniques. My technical proficiency includes Node.js, React, Docker, and full-stack AI deployment, allowing me to create scalable and production-ready AI systems.
+
+Driven by curiosity and innovation, I am committed to pushing the boundaries of AI and transforming complex challenges into impactful solutions.
           </p>
           
           <div className="education-section">
