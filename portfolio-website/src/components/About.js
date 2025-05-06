@@ -7,7 +7,7 @@ const AboutSection = () => {
     <div id="About" className="about-container">
       {/* Left content section */}
       <div className="about-content">
-        <h2 className="about-title">WHO I AM?</h2>
+        <h2 className="about-title">WHO AM I?</h2>
         <p className="about-text"></p>
           <p className="about-text">
             My name is <span className="name-highlight">Bhanu Pratap Singh</span>. I am a passionate AI Engineer and Data Scientist with expertise in machine learning, deep learning, and Generative AI. My work focuses on developing cutting-edge AI applications, LLM-powered automation systems, and intelligent data-driven solutions that enhance efficiency and decision-making.
@@ -27,17 +27,30 @@ const AboutSection = () => {
           <div className="projects-section">
             <p className="projects-title">Featured Projects:</p>
             <ul className="projects-list">
-          <li className="project-item">✅ <span className="project-title">AI-Based Resume Analyzer & Job Recommendation System</span> – Enhancing job matching using ML.</li>
-          <li className="project-item">✅ <span className="project-title">AI-Powered Code Review System</span> – Built with Google Gemini AI for automated code analysis.</li>
-          <li className="project-item">✅ <span className="project-title">NLP-Based Chatbot</span> – Developed with RASA, OpenAI API, and advanced NLP techniques.</li>
-          <li className="project-item">✅ <span className="project-title">E-Commerce Platform</span> – Engineered with Django for seamless user experience.</li>
+              <li className="project-item">
+                <span className="project-title">AI-Based Resume Analyzer & Job Recommendation System</span>
+                <span className="project-description">Enhancing job matching using ML.</span>
+              </li>
+              <li className="project-item">
+                <span className="project-title">AI-Powered Code Review System</span>
+                <span className="project-description">Built with Google Gemini AI for automated code analysis.</span>
+              </li>
+              <li className="project-item">
+                <span className="project-title">NLP-Based Chatbot</span>
+                <span className="project-description">Developed with RASA, OpenAI API, and advanced NLP techniques.</span>
+              </li>
+              <li className="project-item">
+                <span className="project-title">E-Commerce Platform</span>
+                <span className="project-description">Engineered with Django for seamless user experience.</span>
+              </li>
             </ul>
           </div>
+
 
           <div className="resume-section">
             <p className="resume-title">Download My Resume:</p>
             <a 
-          href="https://drive.google.com/file/d/15ckcliV_L7IO5LhtcDAAgs9miynMHDWk/view?usp=sharing" 
+          href="https://drive.google.com/file/d/1Lp0Tt0aWfMwG8nyptwPJsCSFEyuaa1ue/view?usp=sharing" 
           className="resume-download-link" 
           target="_blank" 
           rel="noopener noreferrer"
