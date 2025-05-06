@@ -323,3 +323,70 @@
 .contact-info a:hover::after {
   width: 100%;
 }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 50px 20px;
+  }
+
+  .terminal-header,
+  .contact-terminal {
+    width: 90%;
+  }
+
+  .contact-form {
+    gap: 10px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .contact-info .logo {
+    font-size: 18px;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .terminal-header,
+  .contact-terminal {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .contact-info {
+    padding: 8px 15px;
+  }
+
+  .contact-info .logo {
+    font-size: 16px;
+  }
+}
