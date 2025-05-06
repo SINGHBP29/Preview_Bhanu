@@ -48,35 +48,51 @@
   }
   
   .projects-section {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #1a2b34;
+    border-radius: 8px;
   }
   
   .projects-title {
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #10b981;
   }
   
   .projects-list {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .projects-item {
-    display: flex;
+    gap: 1.5rem;
   }
   
   .project-item {
     display: flex;
-    align-items: center;
-    align-items: center;
+    flex-direction: column;
     gap: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
   }
-
+  
+  .project-item::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
   .project-title {
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.375rem;
+    color: white;
+  }
+  
+  .project-description {
+    font-size: 1.125rem;
+    color: #d1d5db;
+    line-height: 1.6;
   }
 
   .resume-section {
@@ -181,4 +197,63 @@
     .image-section {
       width: 33.333333%;
     }
+  }
+
+
+ /* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .profile-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar-text {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .image-section {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 3rem;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .sidebar-text {
+    transform: rotate(0deg);
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-text,
+  .education-title,
+  .projects-title,
+  .project-title,
+  .resume-title {
+    font-size: 1rem;
   }
