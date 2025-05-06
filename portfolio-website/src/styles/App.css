@@ -90,3 +90,39 @@ body {
     padding: 0 20px;
   }
 }
+
+
+/* More Responsive Enhancements */
+
+/* Reduce base font size and improve readability on tablets */
+@media (max-width: 1024px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .app {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Tighter padding and font scaling on mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .app {
+    padding: 0 1rem;
+  }
+}
+
+/* Compact layout for very small devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.85rem;
+  }
+
+  .app {
+    padding: 0 0.5rem;
+  }
+}
