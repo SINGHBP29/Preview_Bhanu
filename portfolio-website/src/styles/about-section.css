@@ -257,3 +257,9 @@
   .resume-title {
     font-size: 1rem;
   }
+    
+  .resume-download-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
