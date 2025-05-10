@@ -6,7 +6,7 @@ function Experience() {
   
   const experiences = [
     {
-      period: "(1 May 2024 - 30 May 204)",
+      period: "(1 May 2024 - 30 May 2024)",
       title: "Data Scientist Intern",
       organization: "CashCry",
       icon: "user-icon" // This would be replaced with actual icon
