@@ -149,8 +149,8 @@
   
   .profile-image {
     position: relative;
-    width: 30rem;
-    height: 50rem;
+    width: 40rem;
+    height: 70rem;
     overflow: hidden;
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;
