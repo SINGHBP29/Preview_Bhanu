@@ -1,149 +1,193 @@
+/* ===========================
+   Code Snippet Section
+=========================== */
 .code-snippet-section {
-    padding: 80px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-    /* background-color: rgba(6, 19, 32, 0.8); */
-  }
-  .terminal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  padding: 80px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+/* ===========================
+   Terminal Header
+=========================== */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   Code Terminal
+=========================== */
+.code-terminal {
+  width: 100%;
+  max-width: 700px;
+  background-color: #14161b;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem); /* Fluid font size */
+  color: #e0e0e0;
+  box-shadow: 0 0 30px rgba(45, 44, 44, 0.3);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(50px);
+  opacity: 0.9;
+}
+
+/* Terminal Top Bar */
+.code-terminal:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: #535f8e;
+  border-radius: 8px 8px 0 0;
+}
+
+.code-terminal:after {
+  content: '•••';
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  color: #3b3838;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+/* Code Lines */
+.code-line {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: inherit;
+}
+
+.line-number {
+  color: #4d5566;
+  min-width: 24px;
+  margin-right: 20px;
+  user-select: none;
+  text-align: right;
+}
+
+.line-content {
+  flex: 1;
+  position: relative;
+}
+
+/* Cursor */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #33e8ff;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Syntax Highlighting */
+.comment {
+  color: #676E95;
+}
+
+.indent-comment {
+  color: #676E95;
+  padding-left: 20px;
+}
+
+.function {
+  color: #c792ea;
+}
+
+.highlight {
+  color: #33e8ff;
+}
+
+.highlight-orange {
+  color: #ff8a4c;
+}
+
+.blank {
+  height: 20px;
+}
+
+/* Scanline Effect */
+.code-terminal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(173, 75, 75, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+/* ===========================
+   Responsive Styles
+=========================== */
+@media (max-width: 1024px) {
+  .code-snippet-section {
+    padding: 60px 30px;
   }
   .code-terminal {
-    width: 100%;
-    max-width: 700px;
-    background-color: #14161b;
-    border-radius: 8px;
-    padding: 20px;
-    /* right: 150px;
-     */
-     align-items: center;
-    font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 16px;
-    color: #e0e0e0;
-    box-shadow: 0 0 30px rgba(45, 44, 44, 0.3);
-    position: relative;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    transform: translateY(50px);
-    opacity: 0.8;
+    padding: 18px;
   }
-  
-  .code-terminal:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    background: #535f8e;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .code-terminal:after {
-    content: '•••';
-    position: absolute;
-    top: 7px;
-    left: 15px;
-    color: #3b3838;
-    font-size: 30px;
-    letter-spacing: -1px;
-  }
-  
-  .code-line {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 8px;
-    font-size: 14px;
-    position: relative;
-    line-height: 1.5;
-  }
-  
   .line-number {
-    color: #4d5566;
-    min-width: 24px;
-    margin-right: 20px;
-    user-select: none;
-    text-align: right;
+    min-width: 22px;
+    margin-right: 12px;
   }
-  
-  .line-content {
-    flex: 1;
-    position: relative;
+}
+
+@media (max-width: 768px) {
+  .code-snippet-section {
+    padding: 50px 20px;
   }
-  
+  .code-terminal {
+    padding: 15px;
+    padding-top: 40px;
+    font-size: 0.9rem;
+  }
+  .line-number {
+    min-width: 20px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-snippet-section {
+    padding: 40px 10px;
+  }
+  .code-terminal {
+    max-width: 100%;
+    font-size: 0.85rem;
+    padding: 12px;
+    padding-top: 35px;
+  }
+  .line-number {
+    min-width: 18px;
+    margin-right: 8px;
+  }
   .cursor {
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background-color: #33e8ff;
-    animation: blink 1s step-end infinite;
-    vertical-align: middle;
+    width: 6px;
+    height: 14px;
   }
-  
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-  
-  .comment {
-    color: #676E95;
-  }
-  
-  .indent-comment {
-    color: #676E95;
-    padding-left: 20px;
-  }
-  
-  .function {
-    color: #c792ea;
-  }
-  
-  .highlight {
-    color: #33e8ff;
-  }
-  
-  .highlight-orange {
-    color: #ff8a4c;
-  }
-  
-  .blank {
-    height: 20px;
-  }
-  
-  /* Add a subtle scan line effect */
-  .code-terminal::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(173, 75, 75, 0.03),
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px,
-      transparent 2px
-    );
-    pointer-events: none;
-  }
-  
-  @media (max-width: 768px) {
-    .code-snippet-section {
-      padding: 60px 20px;
-    }
-    
-    .code-terminal {
-      padding: 15px;
-      padding-top: 40px;
-    }
-    
-    .line-number {
-      min-width: 20px;
-      margin-right: 10px;
-    }
-  }
+}
