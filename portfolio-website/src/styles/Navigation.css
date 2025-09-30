@@ -1,7 +1,39 @@
+:root {
+  --primary-color: #33e8ff;
+  --text-color: #fff;
+}
+
+/* Navigation container */
+.navigation {
+  position: relative;
+  background: #12151a;
+  padding: 10px 20px;
+  font-family: sans-serif;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  width: 30px;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Menu */
 .navigation ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .navigation li a {
@@ -21,10 +53,45 @@
   margin-right: 5px;
 }
 
-/* Responsive: stack menu vertically on mobile */
+/* Mobile Styles */
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
   .navigation ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: #12151a;
+    padding: 80px 20px;
+    transform: rotateY(90deg) translateX(100%);
+    transform-origin: right center;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  /* Show menu when checkbox is checked with 3D effect */
+  #menu-toggle:checked + .hamburger + .menu {
+    transform: rotateY(0deg) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Hamburger animation */
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 }
