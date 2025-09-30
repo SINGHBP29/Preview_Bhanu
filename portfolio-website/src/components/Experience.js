@@ -3,19 +3,24 @@ import '../styles/Experience.css';
 
 function Experience() {
   // Experience data
-  
   const experiences = [
+    {
+      period: "(Jun 2025 - Present)",
+      title: "Associate Data Science Intern",
+      organization: "Delphi Consulting (Middle East) – Remote (UAE)",
+      icon: "user-icon" // Replace with actual icon if available
+    },
     {
       period: "(1 May 2024 - 30 May 2024)",
       title: "Data Scientist Intern",
       organization: "CashCry",
-      icon: "user-icon" // This would be replaced with actual icon
+      icon: "user-icon"
     },
     {
       period: "(1 May 2022 - 30 May 2022)",
-      title: "Research & Development Intern ( Trainee )",
+      title: "Research & Development Intern (Trainee)",
       organization: "Tropilite Bioflex Foods Pvt. Ltd.",
-      icon: "user-icon" // This would be replaced with actual icon
+      icon: "user-icon"
     }
   ];
 
