@@ -182,7 +182,7 @@ function Contact() {
       <div className="contact-info">
         <div className="details">
           <p><strong>Email:</strong> bhanups292004@gmail.com</p>
-          <p><strong>Phone:</strong> +91 7047097971</p>
+          // <p><strong>Phone:</strong> +91 7047097971</p>
           <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bpsingh29/" target="_blank" rel="noopener noreferrer">linkedin.com/in/bhanu</a></p>
           <p><strong>GitHub:</strong> <a href="https://github.com/SINGHBP29" target="_blank" rel="noopener noreferrer">github.com/SINGHBP29</a></p>
           <p><strong>Medium:</strong> <a href="https://medium.com/@23f1002439" target="_blank" rel="noopener noreferrer">medium.com/@23f1002439</a></p>
