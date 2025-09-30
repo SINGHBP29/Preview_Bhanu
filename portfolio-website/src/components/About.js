@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/about-section.css'; // Import the CSS file
-import profileImage from '../Images/image.jpeg'
+import profileImage from '../Images/bhanu_port.png'
 
 const AboutSection = () => {
   return (
@@ -50,7 +50,7 @@ const AboutSection = () => {
           <div className="resume-section">
             <p className="resume-title">Download My Resume:</p>
             <a 
-          href="https://drive.google.com/file/d/1Lp0Tt0aWfMwG8nyptwPJsCSFEyuaa1ue/view?usp=sharing" 
+          href="https://drive.google.com/file/d/1WyT5V5s4Bg_0-VWUGAaVBkqBdPt_wFFl/view?usp=sharing" 
           className="resume-download-link" 
           target="_blank" 
           rel="noopener noreferrer"
